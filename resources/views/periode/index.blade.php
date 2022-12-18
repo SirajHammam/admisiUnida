@@ -4,12 +4,11 @@
 @section('body')
     <main id="main" class="main">
         <div class="pagetitle">
-            <h1>Insert Period</h1>
+            <h1>Input Periode</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item">Forms</li>
-                    <li class="breadcrumb-item active">Layouts</li>
+                    <li class="breadcrumb-item active">Input Periode</li>
                 </ol>
             </nav>
         </div>
@@ -19,7 +18,7 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Insert Periode</h5>
+                            <h5 class="card-title">Input Tahun Ajaran Baru</h5>
                             @if (session()->has('success'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                                     {{ session()->get('success') }}
@@ -44,7 +43,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-4 text-center">
-                                    <button type="submit" class="btn btn-success">Submit</button>
+                                    <button type="submit" class="btn btn-success">Buat Baru</button>
                                     <button type="reset" class="btn btn-light">
                                         Reset
                                     </button>
@@ -60,7 +59,7 @@
                         <div class="card recent-sales overflow-auto">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    Periods</span>
+                                    Periode</span>
                                 </h5>
                                 @if (session()->has('delete'))
                                     <div class="alert alert-success">
@@ -70,9 +69,9 @@
                                 <table class="table table-striped datatable">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Period</th>
+                                            <th scope="col">Periode</th>
                                             <th scope="col">Status</th>
-                                            <th scope="col">Action</th>
+                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>

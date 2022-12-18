@@ -27,14 +27,14 @@
                                 <div class="card recent-sales overflow-auto">
                                     <div class="card-body">
                                         <h5 class="card-title">
-                                            Periode Pendaftaran | <span> all </span>
+                                            Periode Pendaftaran
                                         </h5>
                                         <table class="table table-striped datatable">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Periode</th>
                                                     <th scope="col">Status</th>
-                                                    <th scope="col">Data Mhs</th>
+                                                    <th scope="col">Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

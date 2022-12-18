@@ -8,6 +8,7 @@
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item">Perhitungan</li>
                     <li class="breadcrumb-item active">{{ $title }}</li>
                 </ol>
             </nav>
@@ -26,7 +27,7 @@
                                 <div class="card recent-sales overflow-auto">
                                     <div class="card-body">
                                         <h5 class="card-title">
-                                            Sistem Pendukung Keputusan | <span> admisi </span>
+                                            Sistem Pendukung Keputusan
                                         </h5>
                                         <table class="table table-striped datatable">
                                             <thead>

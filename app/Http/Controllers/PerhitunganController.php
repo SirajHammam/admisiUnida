@@ -23,7 +23,7 @@ class PerhitunganController extends Controller
 
         $data = patokanBobotSaintek::all();
         return view('perhitungan.index', [
-            'title' => 'Perhitungan',
+            'title' => 'Periode',
             'data' => $data,
             'periode' => $periode
         ]);
@@ -40,7 +40,7 @@ class PerhitunganController extends Controller
                 ->join('tis', 'tis.camaba_id', '=', 'camabas.id')->where('camabas.periode', $periode)
                 ->get();
         } elseif ($prodi == '2') {
-            $title = 'Teknik Industri Pertanian';
+            $title = 'Teknologi Industri Pertanian';
             $dataMahasiswa = DB::table('camabas')
                 ->join('tips', 'tips.camaba_id', '=', 'camabas.id')->where('camabas.periode', $periode)
                 ->get();
@@ -147,7 +147,7 @@ class PerhitunganController extends Controller
     {
         $periodes = periode::all();
         return view('perhitungan.perperiode', [
-            'title' => 'periode',
+            'title' => 'Perhitungan',
             'periodes' => $periodes
         ]);
     }

@@ -41,14 +41,14 @@
                                             <th scope="col">Fisika</th>
                                             <th scope="col">Kimia</th>
                                             <th scope="col">Biologi</th>
-                                            <th scope="col">Sanggup Studi</th>
+                                            <th scope="col">Studi</th>
                                             <th scope="col">pilihan</th>
                                             <th scope="col">Inggris</th>
                                             <th scope="col">Lisan</th>
                                             <th scope="col">Arab</th>
                                             <th scope="col">Fikir</th>
                                             <th scope="col">Dana</th>
-                                            <th scope="col">Studi</th>
+                                            <th scope="col">StudiT</th>
                                             <th scope="col">Hasil</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
@@ -79,7 +79,7 @@
                                                 <td>{{ $data->penghasilan }}</td>
                                                 <td>
                                                     <a href="/data-kriteria/edit/{{ $data->id }}"
-                                                        class="btn btn-success">
+                                                        class="btn btn-warning text-light">
                                                         <i class="bi bi-pencil"></i>
                                                     </a>
                                                 </td>

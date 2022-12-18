@@ -46,12 +46,26 @@
                                         <label for="inputName5"
                                             class="form-label @error('prodi1') is-invalid @enderror">Pilihan Prodi 1</label>
                                         <select class="form-select" name="prodi1">
-                                            <option selected=""></option>
+                                            <option selected=""> - Pilih item -</option>
 
+                                            <option value="iqt">Ilmu Qur'an dan Tafsir</option>
+                                            <option value="saa">Studi Agama-Agama</option>
+                                            <option value="afi">Aqidah dan Filsafat</option>
                                             <option value="ti">Teknik Informatika</option>
-                                            <option value="tip">Teknik Industri Pertanian</option>
+                                            <option value="tip">Teknologi Industri Pertanian</option>
                                             <option value="agro">Agroteknologi</option>
                                             <option value="hi">Hubungan International</option>
+                                            <option value="ilkom">Ilmu Komunikasi</option>
+                                            <option value="pai">Pendidikan Agama islam</option>
+                                            <option value="pba">Pendidikan Bahasa Arab</option>
+                                            <option value="tbi">Tadris Bahasa Inggris</option>
+                                            <option value="ei">Ekonomi Islam</option>
+                                            <option value="mb">Management</option>
+                                            <option value="hes">Hukum Ekonomi Syariah</option>
+                                            <option value="pm">Perbandingan Mazhab</option>
+                                            <option value="k3">Kesehatan dan Keselamatan Kerja</option>
+                                            <option value="far">Farmasi</option>
+                                            <option value="gizi">Ilmu Gizi</option>
 
                                         </select>
                                         {{-- <input type="text" class="form-control" id="prodi1" name="prodi1"> --}}
@@ -60,12 +74,27 @@
                                         <label for="inputName5"
                                             class="form-label @error('prodi2') is-invalid @enderror">Pilihan Prodi 2</label>
                                         <select class="form-select" name="prodi2">
-                                            <option selected=""></option>
+                                            <option selected="">- Pilih item -</option>
 
+                                            <option value="iqt">Ilmu Qur'an dan Tafsir</option>
+                                            <option value="saa">Studi Agama-Agama</option>
+                                            <option value="afi">Aqidah dan Filsafat</option>
                                             <option value="ti">Teknik Informatika</option>
-                                            <option value="tip">Teknik Industri Pertanian</option>
+                                            <option value="tip">Teknologi Industri Pertanian</option>
                                             <option value="agro">Agroteknologi</option>
                                             <option value="hi">Hubungan International</option>
+                                            <option value="ilkom">Ilmu Komunikasi</option>
+                                            <option value="pai">Pendidikan Agama islam</option>
+                                            <option value="pba">Pendidikan Bahasa Arab</option>
+                                            <option value="tbi">Tadris Bahasa Inggris</option>
+                                            <option value="ei">Ekonomi Islam</option>
+                                            <option value="mb">Management</option>
+                                            <option value="hes">Hukum Ekonomi Syariah</option>
+                                            <option value="pm">Perbandingan Mazhab</option>
+                                            <option value="k3">Kesehatan dan Keselamatan Kerja</option>
+                                            <option value="far">Farmasi</option>
+                                            <option value="gizi">Ilmu Gizi</option>
+
 
                                         </select>
                                         {{-- <input type="text" class="form-control" id="prodi2" name="prodi2"> --}}
@@ -74,20 +103,35 @@
                                         <label for="inputName5"
                                             class="form-label @error('prodi3') is-invalid @enderror">Pilihan Prodi 3</label>
                                         <select class="form-select" name="prodi3">
-                                            <option selected=""></option>
+                                            <option selected="">- Pilih item -</option>
 
+                                            <option value="iqt">Ilmu Qur'an dan Tafsir</option>
+                                            <option value="saa">Studi Agama-Agama</option>
+                                            <option value="afi">Aqidah dan Filsafat</option>
                                             <option value="ti">Teknik Informatika</option>
-                                            <option value="tip">Teknik Industri Pertanian</option>
+                                            <option value="tip">Teknologi Industri Pertanian</option>
                                             <option value="agro">Agroteknologi</option>
                                             <option value="hi">Hubungan International</option>
+                                            <option value="ilkom">Ilmu Komunikasi</option>
+                                            <option value="pai">Pendidikan Agama islam</option>
+                                            <option value="pba">Pendidikan Bahasa Arab</option>
+                                            <option value="tbi">Tadris Bahasa Inggris</option>
+                                            <option value="ei">Ekonomi Islam</option>
+                                            <option value="mb">Management</option>
+                                            <option value="hes">Hukum Ekonomi Syariah</option>
+                                            <option value="pm">Perbandingan Mazhab</option>
+                                            <option value="k3">Kesehatan dan Keselamatan Kerja</option>
+                                            <option value="far">Farmasi</option>
+                                            <option value="gizi">Ilmu Gizi</option>
 
                                         </select>
                                         {{-- <input type="text" class="form-control" id="prodi3" name="prodi3"> --}}
                                     </div>
                                     <div class="col-md-3">
                                         <label for="matematika" class="form-label">Matematika</label>
-                                        <input type="text" class="form-control @error('matematika') is-invalid @enderror"
-                                            id="matematika" name="matematika">
+                                        <input type="text"
+                                            class="form-control @error('matematika') is-invalid @enderror" id="matematika"
+                                            name="matematika">
                                         @error('matematika')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -127,7 +171,7 @@
                                     <div class="col-md-3">
                                         <label for="kesanggupan" class="form-label">kesanggupan</label>
                                         <select class="form-select" name="kesanggupan">
-                                            <option selected=""></option>
+                                            <option selected="">- Pilih item -</option>
                                             <option value="5">lanjut S2</option>
                                             <option value="4">S1 + Staff</option>
                                             <option value="3">S1</option>
@@ -169,7 +213,7 @@
                                     <div class="col-md-3">
                                         <label for="pemikiran" class="form-label">Pemikiran</label>
                                         <select class="form-select" name="pemikiran">
-                                            <option selected=""></option>
+                                            <option selected="">- Pilih item -</option>
                                             <option value="4">Baik</option>
                                             <option value="3">Cukup</option>
                                             <option value="2">Kurang</option>
@@ -178,7 +222,7 @@
                                     <div class="col-md-3">
                                         <label for="pendanaan" class="form-label">pendanaan</label>
                                         <select class="form-select" name="pendanaan">
-                                            <option selected=""></option>
+                                            <option selected="">- Pilih item -</option>
                                             <option value="4">organisasi</option>
                                             <option value="3">keluarga</option>
                                             <option value="2">wali</option>
@@ -187,7 +231,7 @@
                                     <div class="col-md-3">
                                         <label for="pendidikan_terakhir" class="form-label">pendidikan terakhir</label>
                                         <select class="form-select" name="pendidikan_terakhir">
-                                            <option selected=""></option>
+                                            <option selected="">- Pilih item -</option>
                                             <option value="5">s3</option>
                                             <option value="4">s2</option>
                                             <option value="3">s1</option>
@@ -197,7 +241,7 @@
                                     <div class="col-md-3">
                                         <label for="penghasilan" class="form-label">penghasilan</label>
                                         <select class="form-select" name="penghasilan">
-                                            <option selected=""></option>
+                                            <option selected="">- Pilih item -</option>
                                             <option value="5">> 10Jt</option>
                                             <option value="4">5Jt - 9Jt</option>
                                             <option value="3">2Jt - 4Jt</option>

@@ -42,7 +42,7 @@ class DataMahasiswaController extends Controller
                 ->orWhere('camabas.prodi3', 'ti')
                 ->get();
         } elseif ($id == '2') {
-            $title = 'Teknik Industri Pertanian';
+            $title = 'Teknologi Industri Pertanian';
             $prodi_id = $id;
             $dataMahasiswa = DB::table('camabas')
                 ->join('tips', 'tips.camaba_id', '=', 'camabas.id')
@@ -230,7 +230,10 @@ class DataMahasiswaController extends Controller
         $icamaba['periode'] = 0;
         $c = periode::where('status', 'aktif')->first();
         $icamaba['periode'] = $c['periode'];
-        camaba::create($icamaba);
+
+        if ($request['prodi1'] == 'ti' && $request['prodi2'] == 'ti' && $request['prodi3'] == 'ti' && $request['prodi1'] == 'tip' && $request['prodi2'] == 'tip' && $request['prodi3'] == 'tip' && $request['prodi1'] == 'agro' && $request['prodi2'] == 'agro' && $request['prodi3'] == 'agro') {
+            camaba::create($icamaba);
+        }
 
         return redirect('/data-mahasiswa')->with('success', 'Data Berhasil tersimpan');
     }

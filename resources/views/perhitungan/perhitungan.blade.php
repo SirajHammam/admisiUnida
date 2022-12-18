@@ -15,7 +15,7 @@
             </nav>
         </div><!-- End Page Title -->
 
-        <section class="section">
+        {{-- <section class="section">
             <div class="row">
                 <div class="col-lg-11">
                     <!-- Recent Sales -->
@@ -202,7 +202,7 @@
                     <!-- End Recent Sales -->
                 </div>
             </div>
-        </section>
+        </section> --}}
         <section class="section">
             <div class="row">
                 <div class="col-lg-8">

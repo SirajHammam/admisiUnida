@@ -42,7 +42,7 @@
                                                 <tr>
                                                     <th scope="col">No</th>
                                                     <th scope="col">Program Studi</th>
-                                                    <th scope="col">Proses Hitung</th>
+                                                    <th scope="col">Data Mhs</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

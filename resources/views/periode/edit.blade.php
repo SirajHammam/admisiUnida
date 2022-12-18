@@ -8,7 +8,7 @@
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="index.html">Periode</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Input Periode</a></li>
                     <li class="breadcrumb-item active">{{ $title }}</li>
                 </ol>
             </nav>

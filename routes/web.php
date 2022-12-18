@@ -35,7 +35,6 @@ Route::get('/data-mahasiswa', [DataMahasiswaController::class, 'index']);
 Route::get('/data-mahasiswa/create', [DataMahasiswaController::class, 'create']);
 Route::post('/data-mahasiswa/create', [DataMahasiswaController::class, 'store']);
 Route::get('/data-mahasiswa/{id}', [DataMahasiswaController::class, 'prodi']);
-Route::get('/data-mahasiswa/{prodi_id}/show/{id}    ', [DataMahasiswaController::class, 'read']);
 Route::get('/data-mahasiswa/{prodi_id}/{id}', [DataMahasiswaController::class, 'edit']);
 Route::post('/data-mahasiswa/{idProdi}/hapus/{id}', [DataMahasiswaController::class, 'destroy']);
 Route::post('/data-mahasiswa/{idProdi}/edit/{id}', [DataMahasiswaController::class, 'update']);

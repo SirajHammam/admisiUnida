@@ -25,7 +25,7 @@
 
                 <div class="col-lg-12">
                     <!-- Recent Sales -->
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         <div class="card recent-sales overflow-auto">
                             <div class="card-body">
                                 <h5 class="card-title">
@@ -43,9 +43,19 @@
                                             <th scope="col">Nama</th>
                                             <th scope="col">Periode</th>
                                             <th scope="col">Pilihan</th>
-                                            <th scope="col">Sanggup</th>
-                                            <th scope="col">B. Arab</th>
-                                            <th scope="col">Action</th>
+                                            <th scope="col">Math</th>
+                                            <th scope="col">Fisika</th>
+                                            <th scope="col">Kimia</th>
+                                            <th scope="col">Biologi</th>
+                                            <th scope="col">Studi</th>
+                                            <th scope="col">Inggris</th>
+                                            <th scope="col">Lisan</th>
+                                            <th scope="col">Arab</th>
+                                            <th scope="col">Fikir</th>
+                                            <th scope="col">Dana</th>
+                                            <th scope="col">StudiT</th>
+                                            <th scope="col">Hasil</th>
+                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -61,16 +71,20 @@
                                                 <td>{{ $a->nama }}</td>
                                                 <td>{{ $a->periode }}</td>
                                                 <td>{{ $a->pilihan }}</td>
+                                                <td>{{ $a->matematika }}</td>
+                                                <td>{{ $a->fisika }}</td>
+                                                <td>{{ $a->kimia }}</td>
+                                                <td>{{ $a->biologi }}</td>
                                                 <td>{{ $a->kesanggupan }}</td>
+                                                <td>{{ $a->inggris }}</td>
+                                                <td>{{ $a->ujian_lisan }}</td>
                                                 <td>{{ $a->arab }}</td>
+                                                <td>{{ $a->pemikiran }}</td>
+                                                <td>{{ $a->pendanaan }}</td>
+                                                <td>{{ $a->pendidikan_terakhir }}</td>
+                                                <td>{{ $a->penghasilan }}</td>
                                                 <td>
                                                     <div class="row">
-                                                        <div class="col g-1">
-                                                            <a href="/data-mahasiswa/{{ $prodi_id }}/show/{{ $a->id }}"
-                                                                class="btn btn-success">
-                                                                <i class="bi bi-eye"></i>
-                                                            </a>
-                                                        </div>
                                                         <div class="col g-1">
                                                             <a href="/data-mahasiswa/{{ $prodi_id }}/{{ $a->id }}"
                                                                 class="btn btn-warning text-light">

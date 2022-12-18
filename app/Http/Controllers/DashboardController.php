@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\agro;
 use App\Models\camaba;
 use App\Models\dashboard;
 use App\Models\periode;
+use App\Models\ti;
+use App\Models\tip;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -17,15 +20,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $dataPeriode = [];
-        $periodeTerakhir = periode::orderBy('periode', 'asc')->take(5)->get();
-        $i = 0;
-        foreach ($periodeTerakhir as $key) {
-            $dataPeriode[$i]['nama'] = $key->periode;
-            $dataCamaba = camaba::where('periode', $key->periode)->get();
-            $dataPeriode[$i]['nilai'] =  $dataCamaba->count();
-            $i++;
-        };
+        $totalTi = ti::all()->count();
+        $totalTip = tip::all()->count();
+        $totalAgro = agro::all()->count();
+
         $periode = periode::where('status', 'aktif')->first();
         $ti = DB::table('camabas')
             ->join('tis', 'tis.camaba_id', '=', 'camabas.id')->where('camabas.periode', $periode['periode'])
@@ -41,7 +39,9 @@ class DashboardController extends Controller
             'ti' => $ti,
             'tip' => $tip,
             'agro' => $agro,
-            'dataPeriode' => $dataPeriode
+            'totalTi' => $totalTi,
+            'totalTip' => $totalTip,
+            'totalAgro' => $totalAgro,
         ]);
     }
 

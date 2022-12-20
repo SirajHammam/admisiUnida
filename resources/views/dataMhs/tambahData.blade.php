@@ -18,7 +18,7 @@
             <div class="row">
 
                 <!-- Left side columns -->
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="row">
 
 
@@ -168,8 +168,42 @@
                                             </span>
                                         @enderror
                                     </div>
+
+                                    {{-- tambahan baru --}}
                                     <div class="col-md-3">
-                                        <label for="kesanggupan" class="form-label">kesanggupan</label>
+                                        <label for="inputPassword5" class="form-label">Dirosah Islamiyyah</label>
+                                        <input type="text" class="form-control @error('dirosah') is-invalid @enderror"
+                                            id="dirosah" name="dirosah">
+                                        @error('dirosah')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="inputPassword5" class="form-label">Pengetahuan Umum</label>
+                                        <input type="text" class="form-control @error('peng-umum') is-invalid @enderror"
+                                            id="peng-umum" name="peng-umum">
+                                        @error('peng-umum')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="inputPassword5" class="form-label">TBI</label>
+                                        <input type="text" class="form-control @error('tbi') is-invalid @enderror"
+                                            id="tbi" name="tbi">
+                                        @error('tbi')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    {{-- End tambahan --}}
+
+                                    <div class="col-md-3">
+                                        <label for="kesanggupan" class="form-label">Kesanggupan Studi</label>
                                         <select class="form-select" name="kesanggupan">
                                             <option selected="">- Pilih item -</option>
                                             <option value="5">lanjut S2</option>
@@ -190,21 +224,21 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-3">
-                                        <label for="inputPassword5" class="form-label">Ujian Lisan</label>
-                                        <input type="text"
-                                            class="form-control @error('ujian_lisan') is-invalid @enderror"
-                                            id="ujian_lisan" name="ujian_lisan">
-                                        @error('ujian_lisan')
+                                        <label for="inputEmail5" class="form-label">Bahasa Arab</label>
+                                        <input type="text" class="form-control @error('arab') is-invalid @enderror"
+                                            id="arab" name="arab">
+                                        @error('arab')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
                                     <div class="col-md-3">
-                                        <label for="inputEmail5" class="form-label">Bahasa Arab</label>
-                                        <input type="text" class="form-control @error('arab') is-invalid @enderror"
-                                            id="arab" name="arab">
-                                        @error('arab')
+                                        <label for="inputPassword5" class="form-label">Ujian Lisan</label>
+                                        <input type="text"
+                                            class="form-control @error('ujian_lisan') is-invalid @enderror"
+                                            id="ujian_lisan" name="ujian_lisan">
+                                        @error('ujian_lisan')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

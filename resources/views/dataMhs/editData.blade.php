@@ -26,13 +26,13 @@
                                 <!-- Multi Columns Form -->
                                 <h5 class="card-title"> Data Calon Mahasiswa</h5>
 
-                                @foreach ($nilai2 as $a)
+                                @foreach ($nilai as $a)
                                     <form class="row g-3" method="post" action="">
 
                                         @csrf
                                         <div class="col-md-8">
                                             <label for="inputName5" class="form-label">Nama Camaba</label>
-                                            <input type="text" class="form-control" id="inputName5"
+                                            <input type="text" class="form-control" id="inputName5" name="nama"
                                                 value="{{ $a->nama }}">
                                         </div>
                                         <div class="col-md-4">
@@ -40,7 +40,7 @@
                                             <input type="text" class="form-control" id="inputName5"
                                                 value="{{ $a->periode }}">
                                         </div>
-                                        <div class="col-md-4">
+                                        {{-- <div class="col-md-4">
                                             <label for="inputName5" class="form-label">Pilihan Prodi 1</label>
                                             <input type="text" class="form-control" id="inputName5"
                                                 value="{{ $a->prodi1 }}">
@@ -49,8 +49,8 @@
                                             <label for="inputName5" class="form-label">Pilihan Prodi 2</label>
                                             <input type="text" class="form-control" id="inputName5"
                                                 value="{{ $a->prodi2 }}">
-                                        </div>
-                                        <div class="col-md-4">
+                                        </div> --}}
+                                        {{-- <div class="col-md-4">
                                             <label for="inputName5" class="form-label">Pilihan Prodi 3</label>
                                             <input type="text" class="form-control" id="inputName5"
                                                 value="{{ $a->prodi3 }}">
@@ -61,34 +61,8 @@
                                             <button type="reset" class="btn btn-secondary">
                                                 Reset
                                             </button>
-                                        </div>
-                                    </form>
-                                @endforeach
-                                </form><!-- End Multi Columns Form -->
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Left side columns -->
-            </div>
-        </section>
+                                        </div> --}}
 
-        <section class="section dashboard">
-            <div class="row">
-
-                <!-- Left side columns -->
-                <div class="col-lg-8">
-                    <div class="row">
-                        <!-- Customers Card -->
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h5 class="card-title"> Nilai Calon Mahasiswa | <span>Menjurus ke Program Studi</span></h5>
-
-                                <!-- Multi Columns Form -->
-                                @foreach ($nilai as $a)
-                                    <form class="row g-3" method="post"
-                                        action="/data-mahasiswa/{{ $idProdi }}/edit/{{ $id }}">
-                                        @csrf
                                         <div class="col-md-3">
                                             <label for="inputEmail5" class="form-label">Pilihan Prodi Ke</label>
                                             <input type="text" class="form-control" id=""

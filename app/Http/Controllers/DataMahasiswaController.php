@@ -35,32 +35,14 @@ class DataMahasiswaController extends Controller
         if ($id == '1') {
             $title = 'Teknik Informatika';
             $prodi_id = $id;
-            $dataMahasiswa = DB::table('camabas')
-                ->join('tis', 'tis.camaba_id', '=', 'camabas.id')
-                ->where('camabas.prodi1', 'ti')
-                ->orWhere('camabas.prodi2', 'ti')
-                ->orWhere('camabas.prodi3', 'ti')
-                ->get();
             $dataMahasiswa = ti::all();
         } elseif ($id == '2') {
             $title = 'Teknologi Industri Pertanian';
             $prodi_id = $id;
-            $dataMahasiswa = DB::table('camabas')
-                ->join('tips', 'tips.camaba_id', '=', 'camabas.id')
-                ->where('camabas.prodi1', 'tip')
-                ->orWhere('camabas.prodi2', 'tip')
-                ->orWhere('camabas.prodi3', 'tip')
-                ->get();
             $dataMahasiswa = tip::all();
         } elseif ($id == '3') {
             $title = 'Agroteknologi';
             $prodi_id = $id;
-            $dataMahasiswa = DB::table('camabas')
-                ->join('agros', 'agros.camaba_id', '=', 'camabas.id')
-                ->where('camabas.prodi1', 'agro')
-                ->orWhere('camabas.prodi2', 'agro')
-                ->orWhere('camabas.prodi3', 'agro')
-                ->get();
             $dataMahasiswa = agro::all();
         }
 
@@ -118,12 +100,12 @@ class DataMahasiswaController extends Controller
     public function store(Request $request)
     {
         $nama = $request['nama'];
-        $icamaba = $request->validate([
-            'nama' => 'required',
-            'prodi1' => 'required',
-            'prodi2' => 'required',
-            'prodi3' => 'required'
-        ]);
+        // $icamaba = $request->validate([
+        //     'nama' => 'required',
+        //     'prodi1' => 'required',
+        //     'prodi2' => 'required',
+        //     'prodi3' => 'required'
+        // ]);
 
         $isaintek = $request->validate([
             'matematika' => 'required',
@@ -263,14 +245,11 @@ class DataMahasiswaController extends Controller
         $data = [];
 
         if ($prodi_id == 1) {
-            $data = ti::where('camaba_id', $id)->get();
-            $data2 = camaba::where('id', $id)->get();
+            $data = ti::where('id', $id)->get();
         } elseif ($prodi_id == 2) {
-            $data = tip::where('camaba_id', $id)->get();
-            $data2 = camaba::where('id', $id)->get();
+            $data = tip::where('id', $id)->get();
         } elseif ($prodi_id == 3) {
-            $data = agro::where('camaba_id', $id)->get();
-            $data2 = camaba::where('id', $id)->get();
+            $data = agro::where('id', $id)->get();
         }
 
 
@@ -278,7 +257,6 @@ class DataMahasiswaController extends Controller
         return view('dataMhs.editData', [
             'title' => 'Data Mahasiswa',
             'nilai' => $data,
-            'nilai2' => $data2,
             'idProdi' => $prodi_id,
             'id' => $id,
 
@@ -302,6 +280,8 @@ class DataMahasiswaController extends Controller
         // ]);
 
         $isaintek = $request->validate([
+            'nama' => 'required',
+            'pilihan' => 'required',
             'matematika' => 'required',
             'fisika' => 'required',
             'kimia' => 'required',
@@ -317,13 +297,13 @@ class DataMahasiswaController extends Controller
         ]);
 
         if ($idProdi == 1) {
-            $editData = ti::where('camaba_id', $id)->first();
+            $editData = ti::where('id', $id)->first();
             $editData->update($isaintek);
         } elseif ($idProdi == 2) {
-            $editData = tip::where('camaba_id', $id)->first();
+            $editData = tip::where('id', $id)->first();
             $editData->update($isaintek);
         } elseif ($idProdi == 3) {
-            $editData = agro::where('camaba_id', $id)->first();
+            $editData = agro::where('id', $id)->first();
             $editData->update($isaintek);
         }
         // $updateData = camaba::findOrFail($id);

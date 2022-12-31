@@ -10,7 +10,6 @@ class ti extends Model
     use HasFactory;
 
     protected $fillable = [
-        'camaba_id',
         'matematika',
         'fisika',
         'kimia',
@@ -25,6 +24,8 @@ class ti extends Model
         'pendanaan',
         'pendidikan_terakhir',
         'penghasilan',
-        'pilihan'
+        'pilihan',
+        'nama',
+        'periode',
     ];
 }

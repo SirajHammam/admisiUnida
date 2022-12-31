@@ -41,6 +41,7 @@ class DataMahasiswaController extends Controller
                 ->orWhere('camabas.prodi2', 'ti')
                 ->orWhere('camabas.prodi3', 'ti')
                 ->get();
+            $dataMahasiswa = ti::all();
         } elseif ($id == '2') {
             $title = 'Teknologi Industri Pertanian';
             $prodi_id = $id;
@@ -50,6 +51,7 @@ class DataMahasiswaController extends Controller
                 ->orWhere('camabas.prodi2', 'tip')
                 ->orWhere('camabas.prodi3', 'tip')
                 ->get();
+            $dataMahasiswa = tip::all();
         } elseif ($id == '3') {
             $title = 'Agroteknologi';
             $prodi_id = $id;
@@ -59,6 +61,7 @@ class DataMahasiswaController extends Controller
                 ->orWhere('camabas.prodi2', 'agro')
                 ->orWhere('camabas.prodi3', 'agro')
                 ->get();
+            $dataMahasiswa = agro::all();
         }
 
         return view('dataMhs.dataMhs', [
@@ -114,7 +117,7 @@ class DataMahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        $camaba_id = count(camaba::all()) + 1;
+        $nama = $request['nama'];
         $icamaba = $request->validate([
             'nama' => 'required',
             'prodi1' => 'required',
@@ -137,13 +140,13 @@ class DataMahasiswaController extends Controller
             'penghasilan' => 'required',
         ]);
 
-        $isaintek['camaba_id'] = $camaba_id;
+        $isaintek['nama'] = $nama;
         $icamaba['periode'] = 0;
 
         if ($request['prodi1'] == 'ti') {
             $iti = $isaintek;
             $iti['pilihan'] = 5;
-            $iti['camaba_id'] = $camaba_id;
+            $iti['nama'] = $nama;
             $c = periode::where('status', 'aktif')->get();
             foreach ($c as $key) {
                 $iti['periode'] = $key['periode'];
@@ -152,7 +155,7 @@ class DataMahasiswaController extends Controller
         } elseif ($request['prodi2'] == 'ti') {
             $iti = $isaintek;
             $iti['pilihan'] = 3;
-            $iti['camaba_id'] = $camaba_id;
+            $iti['nama'] = $nama;
             $c = periode::where('status', 'aktif')->get();
             foreach ($c as $key) {
                 $iti['periode'] = $key['periode'];
@@ -161,7 +164,7 @@ class DataMahasiswaController extends Controller
         } elseif ($request['prodi3'] == 'ti') {
             $iti = $isaintek;
             $iti['pilihan'] = 2;
-            $iti['camaba_id'] = $camaba_id;
+            $iti['nama'] = $nama;
             $c = periode::where('status', 'aktif')->get();
             foreach ($c as $key) {
                 $iti['periode'] = $key['periode'];
@@ -172,7 +175,7 @@ class DataMahasiswaController extends Controller
         if ($request['prodi1'] == 'tip') {
             $itip = $isaintek;
             $itip['pilihan'] = 5;
-            $itip['camaba_id'] = $camaba_id;
+            $itip['nama'] = $nama;
             $c = periode::where('status', 'aktif')->get();
             foreach ($c as $key) {
                 $itip['periode'] = $key['periode'];
@@ -181,7 +184,7 @@ class DataMahasiswaController extends Controller
         } elseif ($request['prodi2'] == 'tip') {
             $itip = $isaintek;
             $itip['pilihan'] = 3;
-            $itip['camaba_id'] = $camaba_id;
+            $itip['nama'] = $nama;
             $c = periode::where('status', 'aktif')->get();
             foreach ($c as $key) {
                 $itip['periode'] = $key['periode'];
@@ -190,7 +193,7 @@ class DataMahasiswaController extends Controller
         } elseif ($request['prodi3'] == 'tip') {
             $itip = $isaintek;
             $itip['pilihan'] = 2;
-            $itip['camaba_id'] = $camaba_id;
+            $itip['nama'] = $nama;
             $c = periode::where('status', 'aktif')->get();
             foreach ($c as $key) {
                 $itip['periode'] = $key['periode'];
@@ -201,7 +204,7 @@ class DataMahasiswaController extends Controller
         if ($request['prodi1'] == 'agro') {
             $iagro = $isaintek;
             $iagro['pilihan'] = 5;
-            $iagro['camaba_id'] = $camaba_id;
+            $iagro['nama'] = $nama;
             $c = periode::where('status', 'aktif')->get();
             foreach ($c as $key) {
                 $iagro['periode'] = $key['periode'];
@@ -210,7 +213,7 @@ class DataMahasiswaController extends Controller
         } elseif ($request['prodi2'] == 'agro') {
             $iagro = $isaintek;
             $iagro['pilihan'] = 3;
-            $iagro['camaba_id'] = $camaba_id;
+            $iagro['nama'] = $nama;
             $c = periode::where('status', 'aktif')->get();
             foreach ($c as $key) {
                 $iagro['periode'] = $key['periode'];
@@ -219,7 +222,7 @@ class DataMahasiswaController extends Controller
         } elseif ($request['prodi3'] == 'agro') {
             $iagro = $isaintek;
             $iagro['pilihan'] = 2;
-            $iagro['camaba_id'] = $camaba_id;
+            $iagro['nama'] = $nama;
             $c = periode::where('status', 'aktif')->get();
             foreach ($c as $key) {
                 $iagro['periode'] = $key['periode'];

@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('tis', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('camaba_id');
+            $table->string('nama');
+            $table->string('periode');
+            $table->string('pilihan');
             $table->integer('matematika');
             $table->integer('fisika');
             $table->integer('kimia');
@@ -28,7 +30,6 @@ return new class extends Migration
             $table->integer('pendanaan');
             $table->integer('pendidikan_terakhir');
             $table->integer('penghasilan');
-            $table->integer('pilihan');
             $table->timestamps();
         });
     }

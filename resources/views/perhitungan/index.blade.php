@@ -1,5 +1,5 @@
-@extends('Layouts.header')
-@extends('Layouts.sidebar')
+@extends('layouts.header')
+@extends('layouts.sidebar')
 
 @section('body')
     <main id="main" class="main">
@@ -66,4 +66,4 @@
     <!-- End #main -->
 @endsection
 
-@extends('Layouts.footer')
+@extends('layouts.footer')

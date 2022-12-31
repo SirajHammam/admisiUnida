@@ -1,5 +1,5 @@
-@extends('Layouts.header')
-@extends('Layouts.sidebar')
+@extends('layouts.header')
+@extends('layouts.sidebar')
 
 @section('body')
     <main id="main" class="main">
@@ -182,8 +182,9 @@
                                     </div>
                                     <div class="col-md-3">
                                         <label for="inputPassword5" class="form-label">Pengetahuan Umum</label>
-                                        <input type="text" class="form-control @error('peng-umum') is-invalid @enderror"
-                                            id="peng-umum" name="peng-umum">
+                                        <input type="text"
+                                            class="form-control @error('peng-umum') is-invalid @enderror" id="peng-umum"
+                                            name="peng-umum">
                                         @error('peng-umum')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -302,4 +303,4 @@
     <!-- End #main -->
 @endsection
 
-@extends('Layouts.footer')
+@extends('layouts.footer')

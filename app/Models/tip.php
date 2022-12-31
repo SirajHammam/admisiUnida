@@ -25,6 +25,8 @@ class tip extends Model
         'pendanaan',
         'pendidikan_terakhir',
         'penghasilan',
-        'pilihan'
+        'pilihan',
+        'nama',
+        'periode',
     ];
 }

@@ -25,6 +25,8 @@ class agro extends Model
         'pendanaan',
         'pendidikan_terakhir',
         'penghasilan',
-        'pilihan'
+        'pilihan',
+        'nama',
+        'periode',
     ];
 }

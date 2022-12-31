@@ -36,19 +36,22 @@ class PerhitunganController extends Controller
 
         if ($prodi == '1') {
             $title = 'Teknik Informatika';
-            $dataMahasiswa = DB::table('camabas')
-                ->join('tis', 'tis.camaba_id', '=', 'camabas.id')->where('camabas.periode', $periode)
-                ->get();
+            // $dataMahasiswa = DB::table('camabas')
+            //     ->join('tis', 'tis.camaba_id', '=', 'camabas.id')->where('camabas.periode', $periode)
+            //     ->get();
+            $dataMahasiswa = ti::all();
         } elseif ($prodi == '2') {
             $title = 'Teknologi Industri Pertanian';
-            $dataMahasiswa = DB::table('camabas')
-                ->join('tips', 'tips.camaba_id', '=', 'camabas.id')->where('camabas.periode', $periode)
-                ->get();
+            // $dataMahasiswa = DB::table('camabas')
+            //     ->join('tips', 'tips.camaba_id', '=', 'camabas.id')->where('camabas.periode', $periode)
+            //     ->get();
+            $dataMahasiswa = tip::all();
         } elseif ($prodi == '3') {
             $title = 'Agroteknologi';
-            $dataMahasiswa = DB::table('camabas')
-                ->join('agros', 'agros.camaba_id', '=', 'camabas.id')->where('camabas.periode', $periode)
-                ->get();
+            // $dataMahasiswa = DB::table('camabas')
+            //     ->join('agros', 'agros.camaba_id', '=', 'camabas.id')->where('camabas.periode', $periode)
+            //     ->get();
+            $dataMahasiswa = agro::all();
         }
 
         // $patokanBobotSaintekTi = patokanBobotSaintek::all();
